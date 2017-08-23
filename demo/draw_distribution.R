@@ -12,11 +12,12 @@ ui <- fluidPage(
   h4("Draw you favorite distribution below. "),
   p("This was inspired by a talk I had with Andrew Bray of Reed College at UseR!2017. Currently you just draw a distirbution but in the future this could be used for bayesian inference with drawn priors."),
   div(span("To enable this functionality a new argument has been added called"),
-      code(raw_draw),
+      code("raw_draw"),
       span("to allow arbitrary drawing without a line added simple set it to true.")
       ),
   hr(),
   shinydrawrUI("user_distribution"),
+  actionButton("goButton", "Go!"),
   h2("Drawn values:"),
   tableOutput("displayDrawn"),
   hr(),
